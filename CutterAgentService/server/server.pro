@@ -3,6 +3,9 @@ TEMPLATE = app
 CONFIG   += console qt
 QT = core network 
 
+INCLUDEPATH += "C:/Qt/qjsonlib"
+LIBS += -LC:/Qt/qjsonlib -lqjson
+
 SOURCES  = main.cpp \
     Utility.cpp \
     Global.cpp \
@@ -19,7 +22,7 @@ SOURCES  = main.cpp \
     processor/CutterSyncPrc.cpp \
     data/HYLicMO.cpp
 
-include(../../src/qtservice.pri)
+include(../../qt-solutions/qtservice/src/qtservice.pri)
 
 HEADERS += \
     Utility.h \
